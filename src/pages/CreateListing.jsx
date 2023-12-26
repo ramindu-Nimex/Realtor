@@ -132,7 +132,7 @@ export default function CreateListing() {
     });
       
     const formDataCopy = {
-      ...formData, imgUrls, geolocation, timestamp: serverTimestamp()
+      ...formData, imgUrls, geolocation, timestamp: serverTimestamp(), userRef: auth.currentUser.uid
     }
     delete formDataCopy.images;
     !formDataCopy.offer && delete formDataCopy.discountedPrice;
